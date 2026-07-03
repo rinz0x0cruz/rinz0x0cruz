@@ -1,0 +1,4 @@
+# local preview / render artifacts
+_*.png
+_*.html
+assets/_*.png
