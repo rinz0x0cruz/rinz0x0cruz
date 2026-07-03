@@ -30,13 +30,12 @@ that turn raw threat data into something you can actually read. Deterministic-fi
 | :-- | :-- | :--: |
 | **[exploitrank](https://github.com/rinz0x0cruz/exploitrank)** | Exploitability-aware CVE prioritizer &mdash; fuses CVSS · EPSS · CISA KEV · public-PoC signals into one SSVC-style verdict, with an offline dashboard. Key-free. | `Go` |
 | **[Ikhor](https://github.com/rinz0x0cruz/Ikhor)** | Command-and-control framework &mdash; a custom async, multi-threaded agent for malware simulation and red-team task scheduling. | `C++` · `Qt` |
-| **[jobscope](https://github.com/rinz0x0cruz/jobscope)** | Resume-driven job scout, enricher, and application-prep tool. Deterministic core, AI optional. | `Python` |
 | **[learnscope](https://github.com/rinz0x0cruz/learnscope)** | Topic in &rarr; ranked learning-resource list out &mdash; a small aggregator over open web APIs. | `Python` |
 
 <p align="center">
   <a href="https://rinz0x0cruz.github.io/exploitrank/"><img src="https://img.shields.io/badge/live-exploitrank_threat_board-39d353?style=flat-square&labelColor=0d1117" alt="live exploitrank threat board" /></a>
   &nbsp;
-  <a href="https://rinz0x0cruz.github.io/jobscope/"><img src="https://img.shields.io/badge/live-jobscope-56d4dd?style=flat-square&labelColor=0d1117" alt="live jobscope" /></a>
+  <a href="https://rinz0x0cruz.github.io/learnscope/"><img src="https://img.shields.io/badge/live-learnscope-56d4dd?style=flat-square&labelColor=0d1117" alt="live learnscope" /></a>
 </p>
 
 <h3 align="center"><code>rinzler@grid:~$ git log --stat</code></h3>

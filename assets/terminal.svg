@@ -53,7 +53,7 @@
   <text class="mono info" x="470" y="204"><tspan class="key b">focus</tspan><tspan class="val" x="544">CVE triage · malware RE · intel</tspan></text>
   <text class="mono info" x="470" y="230"><tspan class="key b">lang</tspan><tspan class="val" x="544">C++ · Python · Rust · KQL · asm</tspan></text>
   <text class="mono info" x="470" y="256"><tspan class="key b">re</tspan><tspan class="val" x="544">IDA Pro · Ghidra · x64dbg · YARA</tspan></text>
-  <text class="mono info" x="470" y="282"><tspan class="key b">ships</tspan><tspan class="val" x="544">exploitrank · Ikhor · jobscope</tspan></text>
+  <text class="mono info" x="470" y="282"><tspan class="key b">ships</tspan><tspan class="val" x="544">exploitrank · Ikhor · learnscope</tspan></text>
   <text class="mono info" x="470" y="308"><tspan class="key b">certs</tspan><tspan class="val" x="544">ISO 27001 · ISC2 CC · DP-420</tspan></text>
 
   <!-- palette -->
