@@ -27,5 +27,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
-          BRANCH_NAME: "cards"
           UTC_OFFSET: 0
+          AUTO_PUSH: false
+      - name: Publish cards to cards branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: cards
+          build_dir: profile-summary-card-output
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

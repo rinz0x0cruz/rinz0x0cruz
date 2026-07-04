@@ -43,14 +43,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Stage 3D calendar into dist
-        run: cp profile-3d-contrib/profile-night-view.svg dist/profile-3d.svg
+      - name: Assemble assets (fresh dir avoids the root-owned snake dir)
+        run: |
+          mkdir -p public
+          sudo cp dist/github-snake.svg public/github-snake.svg
+          sudo cp profile-3d-contrib/profile-night-view.svg public/profile-3d.svg
+          sudo chmod -R a+rX public
 
       - name: Publish assets to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: public
           keep_history: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
