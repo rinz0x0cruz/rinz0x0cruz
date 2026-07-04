@@ -41,11 +41,35 @@ that turn raw threat data into something you can actually read. Deterministic-fi
 <h3 align="center"><code>rinzler@grid:~$ git log --stat</code></h3>
 
 <p align="center">
-  <img width="820" src="https://github-readme-activity-graph.vercel.app/graph?username=rinz0x0cruz&bg_color=1a1b26&color=c0caf5&line=7aa2f7&point=bb9af7&area=true&area_color=7aa2f7&title_color=7aa2f7&hide_border=true&custom_title=contribution%20activity" alt="Contribution activity graph" />
+  <img width="820" src="https://raw.githubusercontent.com/rinz0x0cruz/rinz0x0cruz/output/github-snake.svg" alt="A snake eating my contribution graph" />
 </p>
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=rinz0x0cruz&hide_border=true&background=1a1b26&stroke=3b4261&ring=7aa2f7&fire=bb9af7&currStreakLabel=7aa2f7&sideLabels=c0caf5&dates=565f89&currStreakNum=c0caf5&sideNums=c0caf5&titleColor=7aa2f7" alt="GitHub streak" />
+</p>
+
+<h3 align="center"><code>rinzler@grid:~$ ./stats.sh</code></h3>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rinz0x0cruz/rinz0x0cruz/cards/tokyonight/3-stats.svg" alt="GitHub stats — commits, stars, pull requests, issues, contributions" />
+</p>
+
+<p align="center">
+  <img width="820" src="https://raw.githubusercontent.com/rinz0x0cruz/rinz0x0cruz/output/profile-3d.svg" alt="3D isometric contribution calendar" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://trophy.benkou.dev/?username=rinz0x0cruz&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" alt="GitHub trophies" /></a>
+</p>
+
+<p align="center">
+  <a href="https://tryhackme.com/p/rinz0x0cruz"><img src="https://tryhackme-badges.s3.amazonaws.com/rinz0x0cruz.png" alt="TryHackMe — rinz0x0cruz" /></a>
+</p>
+
+<h3 align="center"><code>rinzler@grid:~$ fortune</code></h3>
+
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random dev quote" />
 </p>
 
 <h3 align="center"><code>rinzler@grid:~$ cat ./contact.txt</code></h3>
