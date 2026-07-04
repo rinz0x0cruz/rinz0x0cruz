@@ -59,7 +59,7 @@ that turn raw threat data into something you can actually read. Deterministic-fi
 </p>
 
 <p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://trophy.benkou.dev/?username=rinz0x0cruz&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" alt="GitHub trophies" /></a>
+  <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://raw.githubusercontent.com/rinz0x0cruz/rinz0x0cruz/trophy/trophy.svg" alt="GitHub trophies" /></a>
 </p>
 
 <p align="center">
