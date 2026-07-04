@@ -1,0 +1,31 @@
+name: summary-cards
+
+# Generates the GitHub profile summary cards (Tokyo Night theme) and pushes the
+# `profile-summary-card-output/` folder to the `cards` branch. The README only
+# embeds the compact stats card; the language cards are intentionally unused.
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # daily, ~04:00 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/summary-cards.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-summary-cards
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: "cards"
+          UTC_OFFSET: 0

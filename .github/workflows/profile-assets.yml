@@ -1,0 +1,56 @@
+name: profile-assets
+
+# Generates the animated contribution snake + the 3D isometric contribution
+# calendar, then publishes both as static SVGs to the `output` branch.
+# The images live in this repo, so they render even if the generator services
+# go down. Nothing here runs on the profile's critical path.
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # daily, ~04:00 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/profile-assets.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      # Contribution snake — Tokyo Night: cyan snake, blue->purple dot ramp.
+      - name: Generate contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?palette=github-dark&color_snake=#7dcfff&color_dots=#24283b,#3b4261,#7aa2f7,#9d7cd8,#bb9af7
+
+      # 3D isometric contribution calendar (dark "night view").
+      - name: Generate 3D contribution calendar
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Stage 3D calendar into dist
+        run: cp profile-3d-contrib/profile-night-view.svg dist/profile-3d.svg
+
+      - name: Publish assets to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
