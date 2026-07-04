@@ -58,3 +58,38 @@ jobs:
           keep_history: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Self-hosted trophy: render ryo-ma's trophy to a static SVG in CI (pinned
+  # commit) and publish to the `trophy` branch. No runtime dependency on the
+  # (now paywalled) trophy service. Own job/branch so a hiccup never touches
+  # the snake/3D assets, and the last good SVG persists.
+  trophy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Render trophy SVG (pinned generator)
+        env:
+          GITHUB_TOKEN1: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN2: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git clone https://github.com/ryo-ma/github-profile-trophy.git /tmp/trophy
+          cd /tmp/trophy
+          git checkout ccb591b887775ee567c0d9a38424ddfb9b1906c4
+          cp "$GITHUB_WORKSPACE/.github/scripts/trophy_render.ts" ./trophy_render.ts
+          mkdir -p "$GITHUB_WORKSPACE/out"
+          deno run --allow-net --allow-env --allow-read --allow-write --no-check \
+            trophy_render.ts "${{ github.repository_owner }}" "$GITHUB_WORKSPACE/out/trophy.svg" tokyonight
+
+      - name: Publish trophy to trophy branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: trophy
+          build_dir: out
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
