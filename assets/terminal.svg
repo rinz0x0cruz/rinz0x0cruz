@@ -42,8 +42,8 @@
   <!-- soft glow behind emblem -->
   <ellipse cx="160" cy="230" rx="150" ry="140" fill="url(#glow)"/>
 
-  <!-- ASCII Tron identity disc emblem -->
-  <text class="mono emblem" fill="url(#emblem)" x="52" y="118" xml:space="preserve"><tspan x="52" dy="0">      ████████      </tspan><tspan x="52" dy="22">   ██████████████   </tspan><tspan x="52" dy="22">  ████░░░░░░░░████  </tspan><tspan x="52" dy="22"> ███░░░░░░░░░░░░░███ </tspan><tspan x="52" dy="22">███░░░░░████░░░░░███</tspan><tspan x="52" dy="22">███░░░░██████░░░░███</tspan><tspan x="52" dy="22">███░░░░░████░░░░░███</tspan><tspan x="52" dy="22"> ███░░░░░░░░░░░░███ </tspan><tspan x="52" dy="22">  ████░░░░░░░░████  </tspan><tspan x="52" dy="22">   ██████████████   </tspan><tspan x="52" dy="22">      ████████      </tspan></text>
+  <!-- ASCII skull emblem -->
+  <text class="mono emblem" fill="url(#emblem)" x="52" y="118" xml:space="preserve"><tspan x="52" dy="0">     ██████████     </tspan><tspan x="52" dy="22">    ████████████    </tspan><tspan x="52" dy="22">  ████████████████  </tspan><tspan x="52" dy="22">████████████████████</tspan><tspan x="52" dy="22">██░░░░░░████░░░░░░██</tspan><tspan x="52" dy="22">██░░░░░░████░░░░░░██</tspan><tspan x="52" dy="22"> ██░░░░██████░░░░██ </tspan><tspan x="52" dy="22">  ██████░░░░██████  </tspan><tspan x="52" dy="22">  ████████████████  </tspan><tspan x="52" dy="22">   ██ ██ ██ ██ ██   </tspan><tspan x="52" dy="22">    █  █  █  █  █   </tspan></text>
 
   <!-- neofetch-style info -->
   <text class="mono info b" x="470" y="98"><tspan class="key">rinzler</tspan><tspan class="muted">@</tspan><tspan class="cyan">grid</tspan></text>
