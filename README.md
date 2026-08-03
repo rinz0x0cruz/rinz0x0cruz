@@ -44,6 +44,7 @@ human-controlled application preparation.
 Reproducible comparisons of model-deliberation strategies using versioned task packs,
 deterministic grading, and an offline mock provider.
 
+[Case study](https://rinz0x0cruz.github.io/blog/benchmark-before-you-debate/) |
 [Source and benchmark guide](https://github.com/rinz0x0cruz/quorum)
 
 ## Working principles
